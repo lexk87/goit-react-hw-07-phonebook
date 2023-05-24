@@ -5,12 +5,12 @@ import {
     LabelInfo,
 } from './Filter.styled';
 import { setFilter } from 'redux/filterSlice';
-import { getFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const Filter = () => {
     const dispatch = useDispatch();
-    const filterValue = useSelector(getFilter);
+    const filterValue = useSelector(selectFilter);
 
     const onFilterChange = e => {
         dispatch(setFilter(e.currentTarget.value.trim()));

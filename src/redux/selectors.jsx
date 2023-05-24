@@ -1,3 +1,3 @@
-export const getContacts = state => state.contacts.contactsList;
-export const getFilter = state => state.filter.value;
-export const getContactForm = state => state.contactForm.isFormOpened;
+export const selectContacts = state => state.contacts.contactsList;
+export const selectFilter = state => state.filter.value;
+export const selectContactForm = state => state.contactForm.isFormOpened;

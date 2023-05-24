@@ -11,7 +11,7 @@ import {
 import { Formik, Form } from 'formik';
 import { nanoid } from 'nanoid';
 import * as yup from 'yup';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 import { addContact } from 'redux/contactsSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -41,7 +41,7 @@ const schema = yup.object().shape({
 
 export const ContactForm = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector(getContacts);
+    const contacts = useSelector(selectContacts);
 
     const handleSubmit = (values, { resetForm }) => {
         values.id = nanoid();

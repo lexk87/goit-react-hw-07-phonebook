@@ -8,11 +8,11 @@ import {
 } from 'components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getContactForm } from 'redux/selectors';
+import { selectContactForm } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 
 export const App = () => {
-    const isFormOpened = useSelector(getContactForm);
+    const isFormOpened = useSelector(selectContactForm);
 
     return (
         <>
