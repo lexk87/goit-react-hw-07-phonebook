@@ -24,27 +24,17 @@ export const ContactList = () => {
     return (
         <>
             {contacts.length > 0 && <Filter />}
-            {/* {isLoading && (
-                <ThreeDots
-                    height="80"
-                    width="80"
-                    radius="9"
-                    color="#4fa94d"
-                    ariaLabel="three-dots-loading"
-                    wrapperStyle={{}}
-                    wrapperClassName=""
-                    visible={true}
-                />
-            )} */}
-            <Loader>
-                <ThreeDots
-                    height="60"
-                    width="60"
-                    radius="9"
-                    color="#00af1a"
-                    ariaLabel="three-dots-loading"
-                />
-            </Loader>
+            {isLoading && (
+                <Loader>
+                    <ThreeDots
+                        height="60"
+                        width="60"
+                        radius="9"
+                        color="#00af1a"
+                        ariaLabel="three-dots-loading"
+                    />
+                </Loader>
+            )}
             {!contacts.length && <NoSavedContacts />}
             {contacts.length > 0 && !filteredContacts.length && (
                 <NoFilteredContacts />
