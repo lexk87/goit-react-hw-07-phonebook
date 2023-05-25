@@ -12,7 +12,7 @@ import { Formik, Form } from 'formik';
 import { nanoid } from 'nanoid';
 import * as yup from 'yup';
 import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

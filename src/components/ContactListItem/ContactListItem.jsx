@@ -8,7 +8,7 @@ import {
     ContactName,
     ContactPhoneNumber,
 } from './ContactListItem.styled';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 import { useDispatch } from 'react-redux';
 
 export const ContactListItem = ({ id, name, number }) => {
