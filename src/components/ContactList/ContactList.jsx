@@ -24,6 +24,19 @@ export const ContactList = () => {
         dispatch(fetchContacts());
     }, [dispatch]);
 
+    const showErrorToast = () => {
+        toast.error("Oops... something went wrong. Let's try again.", {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+        });
+    };
+
     return (
         <>
             {contacts.length > 0 && <Filter />}
@@ -56,17 +69,7 @@ export const ContactList = () => {
                 </PhonebookList>
             )}
 
-            {error &&
-                toast.error("Oops... something went wrong. Let's try again.", {
-                    position: 'top-right',
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: 'colored',
-                })}
+            {error && showErrorToast()}
         </>
     );
 };
