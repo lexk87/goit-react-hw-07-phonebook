@@ -57,7 +57,7 @@ export const ContactList = () => {
             )}
 
             {error &&
-                toast.error("Oops... something went wrong. Let's try again)", {
+                toast.error("Oops... something went wrong. Let's try again.", {
                     position: 'top-right',
                     autoClose: 3000,
                     hideProgressBar: false,
