@@ -16,7 +16,7 @@ const handleAddContact = (state, action) => {
 
 const handleDeleteContact = (state, action) => {
     state.contactsList = state.contactsList.filter(
-        ({ id }) => id !== action.payload
+        ({ id }) => id !== action.payload.id
     );
 };
 
